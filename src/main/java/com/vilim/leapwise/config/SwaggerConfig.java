@@ -16,7 +16,7 @@ public class SwaggerConfig {
             \s
             STEP 2 - Enter a JSON object representing a customer together with the ID of a created expression. Fill in the fields with data that corresponds to the types and structure provided in the example.
             \s
-            RESULT - The app returns 'true' or 'false' if all inputs and their rules are satisfied OR throw an exception.
+            RESULT - The app returns 'true' or 'false' if all inputs and their rules are satisfied OR throws an exception. Executes from left to right.
             \s""";
 
     @Bean
