@@ -15,8 +15,8 @@ public class ExpressionSaveRequest {
     @NotNull(message = "Cannot be null")
     private String name;
 
-    @Schema(example = "(customer.firstName == 'JOHN' && customer.salary < 100) "
-            + "OR (customer.address != null && customer.address.city == 'Washington')")
+    @Schema(example = "customer.firstName == \"JOHN\"' && customer.salary < 100 "
+            + "OR customer.address != null && customer.address.city == \"Washington\"")
     @NotNull(message = "Cannot be null")
     private String value;
 }
