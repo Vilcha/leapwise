@@ -56,6 +56,12 @@ public class GlobalExceptionHandler {
         return ResponseEntity.badRequest().body(new ErrorMessage(ex.getMessage()));
     }
 
+    @ExceptionHandler({IllegalAccessException.class})
+    public ResponseEntity<ErrorMessage> handleIllegalAccessException(final IllegalAccessException ex) {
+        log.error(ex.getMessage());
+        return ResponseEntity.badRequest().body(new ErrorMessage(ex.getMessage()));
+    }
+
     @ExceptionHandler({ExpressionEvaluationException.class})
     public ResponseEntity<ErrorMessage> handleExpressionEvaluationException(final ExpressionEvaluationException ex) {
         log.error(ex.getMessage());

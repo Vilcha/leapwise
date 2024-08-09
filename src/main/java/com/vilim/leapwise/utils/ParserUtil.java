@@ -21,7 +21,7 @@ public final class ParserUtil {
         return root;
     }
 
-    public static ExpressionNode parseExpression(final String expression) {
+    private static ExpressionNode parseExpression(final String expression) {
         int length = expression.length();
         boolean isString = false;
         char quote = 0;
