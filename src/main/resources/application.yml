@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:customerdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  h2:
+    console:
+      enabled: true
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    tags-sorter: alpha
+    operations-sorter: alpha
