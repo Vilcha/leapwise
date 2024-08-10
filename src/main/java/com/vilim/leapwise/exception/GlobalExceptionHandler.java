@@ -67,10 +67,4 @@ public class GlobalExceptionHandler {
         log.error(ex.getMessage());
         return ResponseEntity.badRequest().body(new ErrorMessage(LOGICAL_EXPRESSION_EXCEPTION + ex.getMessage()));
     }
-
-    @ExceptionHandler({Exception.class})
-    public ResponseEntity<ErrorMessage> handleGlobalException(final Exception ex) {
-        log.error(GENERIC_EXCEPTION, ex);
-        return ResponseEntity.internalServerError().body(new ErrorMessage(GENERIC_EXCEPTION + ex.getMessage()));
-    }
 }
