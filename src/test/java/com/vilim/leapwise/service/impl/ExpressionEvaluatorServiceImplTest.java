@@ -47,8 +47,4 @@ class ExpressionEvaluatorServiceImplTest {
         assertEquals(HttpStatus.CREATED, response.getStatusCode());
         assertEquals(expressionEntity.getId(), response.getBody());
     }
-
-    @Test
-    void evaluateExpression() {
-    }
 }

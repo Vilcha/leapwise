@@ -6,8 +6,6 @@ import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
-import java.util.Optional;
-
 @Component
 @RequiredArgsConstructor
 public final class ExpressionUtil {
@@ -15,14 +13,10 @@ public final class ExpressionUtil {
     private final ExpressionRepository expressionRepository;
 
     public ExpressionEntity checkIfExpressionExists(final Long id) {
-        if (id < 0) {
+        if (id < 1) {
             throw new IllegalArgumentException("ID must be greater than 0");
         }
-        Optional<ExpressionEntity> expressionOpt = expressionRepository.findById(id);
-        if (expressionOpt.isPresent()) {
-            return expressionOpt.get();
-        } else {
-            throw new EntityNotFoundException("Expression entity with ID " + id + " not found");
-        }
+        return expressionRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Expression entity with ID " + id + " not found"));
     }
 }

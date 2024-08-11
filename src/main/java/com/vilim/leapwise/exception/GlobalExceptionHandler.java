@@ -17,7 +17,6 @@ public class GlobalExceptionHandler {
 
     public static final String DATABASE_INTEGRITY_VIOLATION_EXCEPTION = "Data integrity violation exception - ";
     public static final String VALIDATION_ERROR = "Validation failed: ";
-    public static final String GENERIC_EXCEPTION = "An unexpected error occurred - ";
     public static final String LOGICAL_EXPRESSION_EXCEPTION = "Error while evaluating a logical expression - ";
 
     @ExceptionHandler({DataIntegrityViolationException.class})
